@@ -1,0 +1,67 @@
+
+---------------------------------------------------------------------------------------------------
+INSTALLATION
+---------------------------------------------------------------------------------------------------
+
+Éxecution:
+
+1 - Ouvrir le dossier "dist" et ensuite le dossier "main"
+2 - Double-cliquer sur l'executable "main" ou "main.exe"
+3 - À la fin du programme vous trouverez le ficher "network-snapshot.txt" qui contient
+l'information du réseau qui à été utilisé pour la validation généralisé,
+et "learning-db.txt" qui contiendra la base de données pour l'apprentissage 
+
+Configuration:
+
+1 - Ouvrir le dossier "dist" et ensuite le dossier "main"
+2 - Ouvrez le fichier "config" ou "config.txt" et modifier les paramètres que vous voulez
+3 - Sauvez et double-cliquer sur "main" ou "main.exe" à nouveau pour voir l'effet de votre configuration
+
+Note: faite attention à ne pas changer le nom des paramètres, par exemple: "Training data path:"
+
+Compilation:
+
+1 - Installer python 3
+2 - Installer la librairie tqdm (barre de progrès):
+    - Dans une terminal: pip3 install tqdm
+4 - Installer la librairie numpy (calcul de distance euclidienne)
+    - Dans une terminal pip3 install numpy
+5 - Rouler "main.py"
+6 - Ouvrez le fichier "config" ou "config.txt" dans le dossier principal et non pas dans "dist"
+et modifier les paramètres que vous voulez
+7 - Rouler "main.py" à nouveau pour voir l'effet de votre configuration
+
+NOTE: le code est écrit en anglais pour éviter des problèmes de caractère au cours du dévelopement
+
+**IMPORTANT**
+
+----- Meilleur Performance -----
+
+
+
+---------------------------------------------------------------------------------------------------
+STRUCTURE DU PROGRAMME
+---------------------------------------------------------------------------------------------------
+
+Le programme est divisé en 5 partie majeurs: 
+
+- Le "main" (main.py): 
+    - Démarre le programme
+    - Crée le système 
+
+- Le Système (system.py):
+    - Utilise l'utilitaire pour lire le fichier de configuration
+    - Crée le réseau avec le fichier de configuration 
+    - Crée une calculatrice pour faire les calculs nécessaires sur le réseau  
+    - Contient la boucle d'apprentissage et les boucles de test
+
+- Le Réseau (network.py):
+    - Contient et positionne les représentants
+
+- La Calculatrice (calculator.py):
+    - Contient l'algorithme pour mettre à jour les représentants
+    - Calcul la distance entre les représentants et l'entrée
+
+- L'Utilitaire (utility.py):
+    - Aide à extraire et formatter les données et le fichier de configuration
+    - Initialise les représentants d'après la méthode choisit dans le fichier de configuration

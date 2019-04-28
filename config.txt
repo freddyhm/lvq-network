@@ -1,0 +1,14 @@
+Training data path: data_train.txt
+Number of frames to extract: 40
+Load static parameters or all parameters [static = 12][all = 26]: all
+Epoch: 1
+VC data path: data_vc.txt
+Generalization data path: data_test.txt
+Saved network snapshot file: network-snapshot.txt
+Saved database used for learning: learning-db.txt
+Dimension of input [frames x static/all]: 1040
+alpha [0.01][0.1][...][decrement = 0.01 to 0.001]: decrement
+Alpha divider for each epoch (only with decrement option): 1.1
+Number of classes: 10
+Number of representatives per class: 1
+Initialize weight method [cmean][random]: cmean
